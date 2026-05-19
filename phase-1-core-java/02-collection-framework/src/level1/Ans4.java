@@ -6,18 +6,16 @@ import java.util.List;
 
 public class Ans4 {
     public static void main(String[] args) {
-        List<String> names = new ArrayList<>();
+        List<Integer> nums = new ArrayList<>();
 
-        names.add("Arman");
-        names.add("Priya");
-        names.add("Raj");
-        names.add("Sneha");
-        names.add("Rohan");
+        nums.add(5);
+        nums.add(2);
+        nums.add(8);
+        nums.add(1);
+        nums.add(9);
+        nums.add(3);
 
-        System.out.println("Before Sorting: " + names);
-
-        Collections.sort(names);
-
-        System.out.println("After Sorting: " + names);
+        System.out.println("Maximum Number: " + Collections.max(nums));
+        System.out.println("Minimum Number: " + Collections.min(nums));
     }
 }

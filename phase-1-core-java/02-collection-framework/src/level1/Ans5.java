@@ -6,17 +6,17 @@ import java.util.List;
 
 public class Ans5 {
     public static void main(String[] args) {
-        List<Integer> nums = new ArrayList<>();
+        List<String> names = new ArrayList<>();
+        names.add("Priya");
+        names.add("Arman");
+        names.add("Sneha");
+        names.add("Rohan");
 
-        nums.add(5);
-        nums.add(2);
-        nums.add(8);
-        nums.add(1);
-        nums.add(9);
-        nums.add(3);
+        System.out.println("Before Reverse: " + names);
 
-        System.out.println("Maximum Number: " + Collections.max(nums));
-        System.out.println("Minimum Number: " + Collections.min(nums));
+        Collections.reverse(names);
+
+        System.out.println("After Reverse: " + names);
 
     }
 }
