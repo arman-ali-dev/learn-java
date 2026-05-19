@@ -1,22 +1,22 @@
-# Java Collection Framework - Practice Questions
+# Java Collection Framework - Complete Practice Questions
 
 ---
 
 ## LEVEL 1 - ABSOLUTE BASICS
 
-These questions test if you understand the very basic operations. Do not skip these even if they look easy.
+Do not skip these. These build your base.
 
 ---
 
 ### Q1
 
-Create an ArrayList of Strings. Add 5 student names to it. Print all names using a for-each loop. Then print the name at index 2.
+Create an ArrayList of 5 student names. Print all using for-each loop. Print the element at index 2. Print total size of list.
 
 ---
 
 ### Q2
 
-Create an ArrayList. Add these numbers: 10, 20, 30, 40, 50. Remove the element at index 1. Then remove the element with value 40. Print the final list.
+Create an ArrayList with numbers [10, 20, 30, 40, 50]. Remove element at index 1. Remove element with value 40. Print the final list.
 
 Expected output: [10, 30, 50]
 
@@ -24,79 +24,109 @@ Expected output: [10, 30, 50]
 
 ### Q3
 
-Create an ArrayList of integers. Add 5 numbers. Check if the list contains the number 7. Print the index of number 30. Print the total size of the list.
+Create an ArrayList with these numbers: [5, 3, 8, 1, 9, 2, 7]. Sort it using Collections.sort(). Print before and after sorting.
 
 ---
 
 ### Q4
 
-Create an ArrayList with names ["Arman", "Priya", "Raj", "Sneha", "Rohan"]. Sort the list alphabetically using Collections.sort(). Print before and after sorting.
+Create an ArrayList with numbers [3, 7, 2, 9, 4, 6, 1]. Find the max and min using Collections.max() and Collections.min().
 
 ---
 
 ### Q5
 
-Create an ArrayList of integers: [5, 2, 8, 1, 9, 3]. Find the maximum and minimum using Collections.max() and Collections.min().
+Create an ArrayList with names ["Priya", "Arman", "Sneha", "Rohan"]. Use Collections.reverse() to reverse the order. Print before and after.
 
 ---
 
 ### Q6
 
-Create a HashSet of Strings. Add these values: "apple", "banana", "apple", "mango", "banana". Print the size. The answer should be 3, not 5. Explain in a comment why.
+Create an ArrayList with names ["Arman", "Priya", "Raj"]. Use Collections.swap() to swap the first and last element. Print result.
 
 ---
 
 ### Q7
 
-Create a HashSet. Add 10 to it. Add 20. Add 10 again. Check if it contains 10. Check if it contains 50. Print size.
+Create a HashSet of Strings. Try to add these: ["apple", "banana", "apple", "mango", "banana"]. Print the size. It should be 3. Print the set.
 
 ---
 
 ### Q8
 
-Create a HashMap<String, Integer> where keys are student names and values are their ages. Add at least 4 entries. Get the age of one specific student. Check if a key exists. Remove one entry.
+Create a HashSet of integers. Add 10, 20, 30, 40. Check if it contains 20. Check if it contains 99. Remove 30. Print the final set and size.
 
 ---
 
 ### Q9
 
-Create a HashMap. Put the key "score" with value 85. Then put the same key "score" with value 95. Get the value of "score". What will it print and why?
+Create a HashMap where keys are student names (String) and values are marks (Integer). Add 4 entries. Get value for one specific key. Try to get value for a key that does not exist. Print what you get.
 
 ---
 
 ### Q10
 
-Create a HashMap<String, String> where key is roll number and value is student name. Loop through all entries using entrySet() and print each roll number with its name.
+Create a HashMap. Put key "Arman" with value 85. Then put key "Arman" again with value 95. Get the value of "Arman". What prints and why? Write the reason as a comment.
 
 ---
 
 ### Q11
 
-Create a Queue using LinkedList. Add 4 names to it. Use peek() to see the front. Use poll() to remove the front. Print the queue again.
+Create a HashMap<String, String> where key is a city name and value is the state it is in. Add 5 entries. Loop through all entries using entrySet() and print each city with its state.
 
 ---
 
 ### Q12
 
-Create a LinkedList. Use addFirst() to add "A" and addLast() to add "Z". Add "M" normally with add(). Print getFirst() and getLast().
+Create a Queue using LinkedList. Add 4 names. Use peek() to see the front without removing. Use poll() to remove front twice. Print the queue after each operation.
 
 ---
 
 ### Q13
 
-Create a TreeSet of integers. Add numbers in this order: 50, 10, 40, 20, 30. Print the TreeSet. What order will they be in?
+Create a LinkedList. Use addFirst() to add "A". Use addLast() to add "Z". Use add() to add "M" in between. Use getFirst() and getLast(). Print all.
 
 ---
 
 ### Q14
 
-Create an ArrayList of Strings. Add some names. Convert the entire list to a HashSet. What happens to any duplicates that were in the list?
+Create a Stack. Push 5 numbers: 10, 20, 30, 40, 50. Use peek() to see top. Pop twice. Print the remaining stack. Check if stack is empty.
 
 ---
 
 ### Q15
 
-What is the difference between ArrayList and LinkedList? Write a program that creates both, adds 5 elements, and uses get(2) on both. Which one is faster at get() and why?
+Create a TreeSet of integers and add: 50, 10, 40, 20, 30. Print the TreeSet. Note the order. Use first() and last() to get smallest and largest.
+
+---
+
+### Q16
+
+Create an ArrayList of integers: [1, 2, 3, 4, 5]. Get an Iterator from it. Use hasNext() and next() to loop and print each element manually.
+
+---
+
+### Q17
+
+Create a Vector of Strings. Add 4 names. Use elementAt() to access by index. Use firstElement() and lastElement(). Print the capacity and size.
+
+---
+
+### Q18
+
+Create a PriorityQueue of integers. Add 5, 1, 3, 2, 4. Poll elements one by one and print. What is the order of output?
+
+---
+
+### Q19
+
+Create an ArrayDeque. Add "B" at front using offerFirst(). Add "D" at back using offerLast(). Add "A" at front again. Add "E" at back again. Print the deque. Remove from front and back once each.
+
+---
+
+### Q20
+
+Create a HashSet of integers. Create another HashSet of integers. Check if they have any common element using Collections.disjoint(). Try with sets that do share elements and sets that do not.
 
 ---
 
@@ -104,126 +134,162 @@ What is the difference between ArrayList and LinkedList? Write a program that cr
 
 ---
 
-### Q16
+### Q21
 
-Create an ArrayList of integers. Loop through it and print only the even numbers.
+Create an ArrayList of integers. Print only even numbers from it.
 
 Input: [1, 4, 7, 8, 12, 3, 6, 15, 20, 9]
-Expected output: 4, 8, 12, 6, 20
+Expected: 4 8 12 6 20
 
 ---
 
-### Q17
+### Q22
 
-Create an ArrayList of integers. Move all even numbers to one list and all odd numbers to another list. Print both lists.
+Create an ArrayList of integers. Separate it into two lists: one with even numbers, one with odd numbers.
 
 Input: [1, 4, 7, 8, 12, 3, 6, 15, 20, 9]
 Expected: evens=[4, 8, 12, 6, 20], odds=[1, 7, 3, 15, 9]
 
 ---
 
-### Q18
-
-Given an ArrayList of integers, find the sum of all elements without using any built-in sum method. Use a loop.
-
-Input: [10, 20, 30, 40, 50]
-Expected output: 150
-
----
-
-### Q19
-
-Given an ArrayList of integers, find the second largest number. Do not sort the list.
-
-Input: [3, 1, 4, 1, 5, 9, 2, 6]
-Expected output: 6
-
----
-
-### Q20
-
-Given an ArrayList of Strings, count how many strings start with the letter 'A' (case insensitive).
-
-Input: ["Arman", "Priya", "Anita", "raj", "abhishek", "Sneha"]
-Expected output: 3
-
----
-
-### Q21
-
-Remove all duplicate elements from an ArrayList while maintaining insertion order.
-
-Input: ["Raj", "Amit", "Raj", "Sneha", "Amit", "Priya", "Raj"]
-Expected output: [Raj, Amit, Sneha, Priya]
-
-Hint: Use LinkedHashSet.
-
----
-
-### Q22
-
-Count the frequency of each word in a String array using HashMap.
-
-Input: ["apple", "mango", "apple", "banana", "mango", "apple", "banana", "mango"]
-Expected output: apple=3, mango=3, banana=2
-
----
-
 ### Q23
 
-Find the most frequent element in an array using HashMap.
+Find sum of all elements in an ArrayList without using any built-in sum method. Use a loop only.
 
-Input: [1, 3, 2, 1, 4, 1, 3, 2, 1]
-Expected output: 1 appears 4 times
+Input: [10, 20, 30, 40, 50]
+Expected: 150
 
 ---
 
 ### Q24
 
-Create a phone book using HashMap<String, String>. Keys are names, values are phone numbers. Write a method that searches by name and returns the number. If name not found, print "Contact not found".
+Find the second largest number in an ArrayList without sorting.
+
+Input: [3, 1, 4, 1, 5, 9, 2, 6]
+Expected: 6
 
 ---
 
 ### Q25
 
-Use a HashMap to count the number of vowels and consonants in a given String. Print the count of each.
+Count how many strings in a list start with the letter 'A' (case insensitive).
 
-Input: "Hello World"
-Expected: vowels=3, consonants=7 (ignore spaces)
+Input: ["Arman", "Priya", "Anita", "raj", "abhishek", "Sneha"]
+Expected: 3
 
 ---
 
 ### Q26
 
-Create a Queue. Write a simulation where 5 customers enter the queue one by one, and then they are served one by one (polled). Print a message when each customer enters and when each is served.
+Remove all duplicate elements from an ArrayList. The order of remaining elements should be maintained.
+
+Input: ["Raj", "Amit", "Raj", "Sneha", "Amit", "Priya", "Raj"]
+Expected: [Raj, Amit, Sneha, Priya]
+
+Hint: Use LinkedHashSet.
 
 ---
 
 ### Q27
 
-Use a PriorityQueue of integers. Add these numbers: 5, 1, 3, 2, 4. Poll them one by one and print. What order do they come out in?
+Count the frequency of each character in a String using HashMap.
+
+Input: "programming"
+Expected: {p=1, r=2, o=1, g=2, a=1, m=2, i=1, n=1}
 
 ---
 
 ### Q28
 
-Create a TreeSet of Strings. Add 5 city names. Print them. They should appear alphabetically. Then use first() and last() to get the alphabetically first and last city.
+Count the frequency of each word in a String array using HashMap.
+
+Input: ["apple", "mango", "apple", "banana", "mango", "apple"]
+Expected: {apple=3, mango=2, banana=1}
 
 ---
 
 ### Q29
 
-Check if two lists have any common elements using HashSet. Do not use nested loops.
+Find the most frequently occurring element in an integer array using HashMap.
 
-list1 = [1, 2, 3, 4, 5]
-list2 = [4, 5, 6, 7, 8]
-Expected: Common elements are [4, 5]
+Input: [1, 3, 2, 1, 4, 1, 3, 2, 1]
+Expected: 1 appears 4 times
 
 ---
 
 ### Q30
 
-Given two ArrayLists, create three results: union (all elements from both), intersection (common elements), and difference (in list1 but not list2). Use HashSet operations.
+Create a phone directory using HashMap. User can search a name and get the number. If not found, print "Contact not found".
+
+---
+
+### Q31
+
+Check if two ArrayLists have any common elements using HashSet. Do not use nested loops.
+
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+Expected: Common = [4, 5]
+
+---
+
+### Q32
+
+Find elements only in list1 (not in list2), only in list2 (not in list1), and common in both. Use HashSet operations retainAll and removeAll.
+
+---
+
+### Q33
+
+Use a PriorityQueue of Strings where shorter strings come out first. Add words and poll them one by one.
+
+---
+
+### Q34
+
+Use a Stack (ArrayDeque) to reverse a String. Push each character one by one. Pop each character to get reversed string.
+
+Input: "Arman"
+Expected: "namrA"
+
+---
+
+### Q35
+
+Simulate a printer queue using LinkedList. Each print job has a name. Jobs are added and served in FIFO order. Print which job is being processed each time.
+
+---
+
+### Q36
+
+Use Collections.binarySearch() to find a number in a sorted list. First sort the list, then search. Also try searching for a number that is not in the list and print what the return value means.
+
+---
+
+### Q37
+
+Use Collections.frequency() to count how many times a specific element appears in a List.
+
+---
+
+### Q38
+
+Use Collections.nCopies() to create a list of 7 copies of the string "hello". Print it. Then try to add another element to it.
+
+---
+
+### Q39
+
+Create two LinkedLists. Use ListIterator to traverse the first one forward and then backward, printing each element.
+
+---
+
+### Q40
+
+Write a program that safely removes all strings shorter than 3 characters from a List while iterating. Use Iterator so it does not throw ConcurrentModificationException.
+
+Input: ["hi", "arman", "ok", "priya", "yo", "raj"]
+Expected remaining: ["arman", "priya", "raj"]
 
 ---
 
@@ -231,155 +297,190 @@ Given two ArrayLists, create three results: union (all elements from both), inte
 
 ---
 
-### Q31
+### Q41
 
-Create a Student class with fields name and marks. Create an ArrayList of Student objects. Sort them in ascending order by marks using Comparable. Print all students after sorting.
-
----
-
-### Q32
-
-Same as Q31, but now sort in descending order by marks. If two students have same marks, sort them alphabetically by name.
+Create a Student class with name and marks. Create an ArrayList of Student objects. Sort them in ascending order using Comparable. Print sorted list.
 
 ---
 
-### Q33
+### Q42
 
-Create an Employee class with fields name, department, and salary. Use Comparator to:
-
-- First sort by department alphabetically
-- Within same department, sort by salary descending
-  Print the sorted list.
+Use Comparator to sort the same Student list in descending order by marks. If two students have same marks, sort alphabetically by name.
 
 ---
 
-### Q34
+### Q43
 
-Library management using HashMap. Create a class with a HashMap<String, Integer> where key is book title and value is number of available copies.
+Create an Employee class with name, department, salary. Use Comparator to sort first by department alphabetically, then within same department by salary descending.
 
-Methods needed:
+---
+
+### Q44
+
+Library system using HashMap. Book title is key, available copies is value. Implement:
 
 - addBook(String title, int copies)
-- issueBook(String title) -- decrease copies by 1, print "Not available" if 0
-- returnBook(String title) -- increase copies by 1
-- searchBook(String title) -- print copies available
-- showAllBooks() -- print all books and their copies
-
-Test all methods.
+- issueBook(String title) -- decrease copies, print "Not available" if 0
+- returnBook(String title) -- increase copies
+- searchBook(String title) -- print how many copies
+- showAll() -- print all books with copies
 
 ---
 
-### Q35
+### Q45
 
-Implement a simple voting system using HashMap<String, Integer>. Keys are candidate names, values are vote counts.
+Voting system using HashMap. Candidate name is key, vote count is value. Implement:
 
-Methods needed:
-
-- castVote(String candidate) -- add 1 to that candidate's count, create entry if not exists
-- getResults() -- print all candidates with their vote counts
-- getWinner() -- print the candidate with most votes
+- castVote(String candidate)
+- showResults() -- print all with their counts
+- getWinner() -- print candidate with most votes
 
 ---
 
-### Q36
+### Q46
 
-You have a List<String> of words. Group them by their length using HashMap<Integer, List<String>>. Key is the word length, value is list of words with that length.
+Group words by their length using HashMap<Integer, List<String>>.
 
 Input: ["hi", "cat", "dog", "go", "elephant", "rat", "is"]
 Expected: {2=[hi, go, is], 3=[cat, dog, rat], 8=[elephant]}
 
 ---
 
-### Q37
+### Q47
 
-Use a Stack (using ArrayDeque) to check if a string has balanced brackets. For every opening bracket you push, for every closing bracket you pop and check if it matches.
+Group students by their grade using HashMap<String, List<String>>. A=90+, B=75-89, C=60-74, F=below 60.
+
+Input students and marks:
+Arman=95, Priya=82, Raj=67, Sneha=91, Rohan=55, Anita=78
+
+Expected: {A=[Arman, Sneha], B=[Priya, Anita], C=[Raj], F=[Rohan]}
+
+---
+
+### Q48
+
+Balanced brackets checker using Stack (ArrayDeque). For every opening bracket push, for every closing bracket pop and verify it matches.
 
 Valid: "(())", "{[()]}", "()[]{}"
 Invalid: "(()", "{[}]", "(]"
 
 ---
 
-### Q38
+### Q49
 
-Use a Queue to simulate a printer queue. Each print job has a name and number of pages. Jobs are processed in order (FIFO). Print each job as it is processed.
+Find the first non-repeating character in a String using LinkedHashMap (to maintain insertion order).
 
-Create a PrintJob class with fields jobName and pages.
+Input: "aabbcddeff"
+Expected: c (first character that appears only once)
 
 ---
 
-### Q39
+### Q50
 
-Create an inventory system using HashMap<String, Product> where key is product ID and Product has fields name, price, quantity.
+Group anagrams together using HashMap. Two words are anagrams if they have the same characters.
 
-Methods needed:
+Input: ["eat", "tea", "tan", "ate", "nat", "bat"]
+Expected: [[eat, tea, ate], [tan, nat], [bat]]
+
+Hint: Sort each word's characters to form the key.
+
+---
+
+### Q51
+
+Inventory system using HashMap<String, Product>. Product has name, price, quantity. Implement:
 
 - addProduct(String id, Product p)
 - removeProduct(String id)
-- updateQuantity(String id, int newQty)
-- searchProduct(String id) -- print product details
-- getLowStock() -- print all products where quantity < 5
-- getTotalValue() -- return sum of (price \* quantity) for all products
+- updateQuantity(String id, int qty)
+- searchProduct(String id)
+- getLowStock() -- all products with quantity <= 5
+- getTotalValue() -- sum of price \* quantity for all products
 
 ---
 
-### Q40
+### Q52
 
 Given a HashMap<String, Integer> of student marks, find:
 
 - Student with highest marks
 - Student with lowest marks
 - Average of all marks
-- All students who scored above average
+- All students who scored above the average
 
 ---
 
-### Q41
+### Q53
 
-Use two HashMaps: one stores employee name and department, another stores department name and manager name. Given an employee name, find their manager by connecting the two maps.
+Find the top 3 most frequent elements in a list using HashMap.
 
-employees = {Arman: Engineering, Priya: HR, Raj: Engineering}
-managers = {Engineering: Dr. Mehta, HR: Ms. Sharma}
-
-Given "Arman", output: "Arman's manager is Dr. Mehta"
+Input: [1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4]
+Expected output: 3 appears 4 times, 1 appears 3 times, 2 appears 2 times
 
 ---
 
-### Q42
+### Q54
 
-Create a frequency map of characters in a String. Then find the first non-repeating character.
+Two Sum problem using HashMap.
+Given an array and a target, find two numbers that add up to target. Return their indices.
 
-Input: "aabbcddeff"
-Expected: first non-repeating is 'c'
+Input: [2, 7, 11, 15], target=9
+Expected: [0, 1] because 2+7=9
 
-Hint: Use LinkedHashMap to maintain insertion order while counting.
-
----
-
-### Q43
-
-Given a list of Strings, group anagrams together using HashMap<String, List<String>>. Two words are anagrams if they have the same characters.
-
-Input: ["eat", "tea", "tan", "ate", "nat", "bat"]
-Expected: [[eat, tea, ate], [tan, nat], [bat]]
-
-Hint: Sort each word's characters to use as the key.
+Do NOT use nested loops. Use HashMap for O(n) solution.
+Hint: For each number, check if (target - number) exists in map.
 
 ---
 
-### Q44
+### Q55
 
-Implement a simple cache using LinkedHashMap. The cache has a max size. When it is full and a new entry is added, the oldest entry is removed (LRU - Least Recently Used behavior).
-
-Override removeEldestEntry() in LinkedHashMap.
-
----
-
-### Q45
-
-Use PriorityQueue to implement a hospital queue where patients have urgency levels (1 = most urgent, 5 = least urgent). Higher urgency patients should be treated first regardless of arrival order.
+Hospital queue using PriorityQueue. Patients have urgency level (1=most urgent, 5=least urgent). Lower number means higher priority and should be treated first.
 
 Patient class: name, urgencyLevel
-Print the order in which patients are treated.
+Add patients in any order. Poll and treat them. Most urgent should come first.
+
+---
+
+### Q56
+
+Merge two sorted ArrayLists into one sorted ArrayList WITHOUT using sort() after merging. Use the two-pointer technique.
+
+list1 = [1, 3, 5, 7, 9]
+list2 = [2, 4, 6, 8, 10]
+Expected: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+---
+
+### Q57
+
+Use HashMap.compute() to increment marks of a student by 5. Use computeIfAbsent() to add a new student only if they do not already exist. Use computeIfPresent() to give bonus marks only to existing students.
+
+---
+
+### Q58
+
+Use HashMap.merge() to count word frequency. merge() is a cleaner alternative to getOrDefault().
+
+Show the difference between:
+frequency.put(word, frequency.getOrDefault(word, 0) + 1)
+and:
+frequency.merge(word, 1, Integer::sum)
+
+Both should produce same result.
+
+---
+
+### Q59
+
+Implement a simple cache using LinkedHashMap with access order. Max size 3. When a 4th entry is added, oldest entry is automatically removed. Test by adding entries and getting entries, observing which gets evicted.
+
+Override removeEldestEntry() method.
+
+---
+
+### Q60
+
+Use TreeMap to maintain a leaderboard of players sorted by name. Use firstKey() and lastKey(). Use subMap() to get players whose names fall in a given alphabetical range.
 
 ---
 
@@ -387,21 +488,32 @@ Print the order in which patients are treated.
 
 ---
 
-### Q46
+### Q61
 
-Two Sum Problem using HashMap.
-Given an array of integers and a target sum, find two numbers that add up to the target. Return their indices. Use HashMap for O(n) solution.
+Find the length of the longest substring without repeating characters using LinkedHashSet as sliding window.
 
-Input: [2, 7, 11, 15], target = 9
-Expected: indices [0, 1] because 2 + 7 = 9
+Input: "abcabcbb"
+Expected: 3 (abc)
+
+Input: "pwwkew"
+Expected: 3 (wke)
 
 ---
 
-### Q47
+### Q62
 
-Implement a word frequency counter that also tracks which line each word appears on.
+Implement a graph using HashMap<String, List<String>> where key is a city and value is list of directly connected cities. Implement:
 
-Use HashMap<String, List<Integer>> where key is the word and value is list of line numbers where that word appears.
+- addCity(String city)
+- addRoad(String c1, String c2) -- bidirectional
+- getNeighbors(String city)
+- isDirectlyConnected(String c1, String c2)
+
+---
+
+### Q63
+
+Word location tracking. Given multiple lines of text, track which line each word appears on using HashMap<String, List<Integer>>. Key = word, value = list of line numbers.
 
 Input:
 Line 1: "the cat sat"
@@ -412,288 +524,317 @@ Expected: {the=[1,2,3], cat=[1,2], sat=[1,3], ate=[2], rat=[3]}
 
 ---
 
-### Q48
+### Q64
 
-Graph representation using HashMap<String, List<String>>. Each key is a city, value is list of cities it is directly connected to.
-
-Implement:
-
-- addCity(String city)
-- addRoad(String city1, String city2) -- adds both directions
-- getNeighbors(String city) -- print all connected cities
-- isConnected(String city1, String city2) -- true if directly connected
-
----
-
-### Q49
-
-Find the top 3 most frequent elements in a list using HashMap and a sorted approach.
-
-Input: [1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4]
-Expected: [(3, 4 times), (1, 3 times), (2, 2 times)]
-
----
-
-### Q50
-
-Implement a multi-level grouping. You have students with name, city, and grade. Group them first by city, then by grade within each city.
+Multi-level grouping. You have students with name, city, and grade. Group first by city, then by grade inside each city.
 
 Result type: HashMap<String, HashMap<String, List<String>>>
-Key of outer map: city
-Key of inner map: grade
-Value: list of student names
+Outer key: city, Inner key: grade, Value: list of names
 
 ---
 
-### Q51
+### Q65
 
-Merge two sorted ArrayLists into one sorted ArrayList without using sort() after merging. Use the two-pointer technique.
-
-list1 = [1, 3, 5, 7, 9]
-list2 = [2, 4, 6, 8, 10]
-Expected: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Implement your own simple HashMap called MyHashMap<K, V>. Use an array of LinkedLists internally (chaining for collision handling). Implement put(), get(), remove(), size(). Use key.hashCode() % capacity to find bucket index.
 
 ---
 
-### Q52
+### Q66
 
-Implement your own version of a simple HashMap. Create a class MyHashMap<K, V> with:
-
-- An array of LinkedLists as the internal structure (for chaining)
-- put(K key, V value)
-- get(K key)
-- remove(K key)
-- size()
-
-Use key.hashCode() % capacity to find the bucket index.
+Implement a task scheduler using PriorityQueue. Task has name, priority (1-5, lower is higher priority), and deadline (day number). Sort first by deadline, then by priority if deadlines equal.
 
 ---
 
-### Q53
+### Q67
 
-Given a list of transactions where each transaction has sender, receiver, and amount, use HashMap to:
-
-- Calculate net balance for each person (received - sent)
-- Find who owes money (negative balance)
-- Find who should receive money (positive balance)
+Given a list of transactions (sender, receiver, amount), calculate net balance for each person using HashMap. Net balance = total received - total sent. Print who owes money and who should receive money.
 
 ---
 
-### Q54
+### Q68
 
-Implement a task scheduler using PriorityQueue. Each task has a name, priority (1-5), and deadline (integer day number). Tasks with earlier deadlines should be processed first. If deadlines are equal, process by higher priority.
+Sliding window maximum. Given an integer array and window size k, find the maximum in every window of size k using ArrayDeque.
+
+Input: [1, 3, -1, -3, 5, 3, 6, 7], k=3
+Expected: [3, 3, 5, 5, 6, 7]
 
 ---
 
-### Q55
+### Q69
 
-Given a String, find the length of the longest substring without repeating characters. Use LinkedHashSet to track current window of characters.
+Clone a HashMap two ways:
 
-Input: "abcabcbb"
-Expected: 3 (substring "abc")
+1. Shallow copy using new HashMap<>(original) or HashMap.clone()
+2. Deep copy by manually copying each entry
 
-Input: "bbbbb"
-Expected: 1
+Show that modifying the clone after shallow copy can affect the original (if values are objects). Show that deep copy prevents this.
+
+---
+
+### Q70
+
+Sort a HashMap by value (not key). HashMap does not sort by value natively. Use entrySet(), convert to List, sort by value using Comparator.
+
+Input: {Arman=95, Priya=82, Raj=71, Sneha=88}
+Expected (descending by value): Arman=95, Sneha=88, Priya=82, Raj=71
 
 ---
 
 ## LEVEL 5 - OOP + COLLECTIONS COMBINED
 
-These are the hardest. They combine everything you know.
-
 ---
 
-### Q56
+### Q71
 
-Create a School management system:
+School management system.
 
-Classes needed:
+Classes:
 
-- Student: name, rollNo, marks (ArrayList<Integer>), calculateAverage()
-- Teacher: name, subject, List<Student> students they teach
-- School: HashMap<String, Teacher> (key = subject), List<Student> allStudents
+- Student: name, rollNo, List<Integer> marks, calculateAverage()
+- Teacher: name, subject, List<Student> students
+- School: HashMap<String, Teacher> (key=subject), List<Student> allStudents
 
 Methods in School:
 
 - enrollStudent(Student s)
 - assignTeacher(Teacher t, String subject)
-- getTopStudents(int n) -- top n students by average marks
-- getSubjectReport(String subject) -- print all students of that subject with their averages
+- getTopStudents(int n) -- top n by average, use Comparable or Comparator
+- getSubjectReport(String subject) -- print all students with averages for that subject
 
 ---
 
-### Q57
+### Q72
 
-Create an e-commerce cart system:
+E-commerce cart system.
 
 Classes:
 
-- Product: id, name, price, stock
-- CartItem: product, quantity
-- Cart: HashMap<String, CartItem> (key = product id)
+- Product: id, name, price, int stock
+- CartItem: Product product, int quantity
+- Cart: HashMap<String, CartItem> items (key = product id)
 
 Methods in Cart:
 
 - addItem(Product p, int qty) -- if product already in cart, increase quantity
 - removeItem(String productId)
-- updateQuantity(String productId, int newQty)
-- getTotal() -- sum of (price \* quantity) for all items
-- checkout() -- verify stock for each item, print bill, deduct from stock
+- updateQuantity(String productId, int qty)
+- getTotal() -- sum of price \* quantity
+- checkout() -- check stock for each item, if enough: print bill and reduce stock, else print which items are out of stock
 
 ---
 
-### Q58
+### Q73
 
-Create a social network:
+Social network.
 
 Classes:
 
-- User: name, id
-- SocialNetwork: HashMap<String, User> allUsers, HashMap<String, Set<String>> friendships (userId -> Set of friend ids)
+- User: id, name
+- SocialNetwork: HashMap<String, User> users, HashMap<String, Set<String>> friends (userId -> Set of friend ids)
 
 Methods:
 
 - addUser(User u)
-- addFriendship(String userId1, String userId2) -- both directions
-- getFriends(String userId) -- print all friends
-- getMutualFriends(String userId1, String userId2) -- friends of both (use Set intersection)
-- getSuggestedFriends(String userId) -- friends of friends who are not already friends
+- addFriendship(String id1, String id2) -- bidirectional
+- getFriends(String userId)
+- getMutualFriends(String id1, String id2) -- use Set intersection (retainAll)
+- getSuggestedFriends(String userId) -- friends of friends who are not already friends with userId
 
 ---
 
-### Q59
+### Q74
 
-Create a bank system:
+Bank system.
 
 Classes:
 
-- Account: accountNo, holderName, balance
-- Transaction: fromAcc, toAcc, amount, type (CREDIT/DEBIT)
-- Bank: HashMap<String, Account> accounts, List<Transaction> transactionHistory
+- Account: accNo, holderName, double balance
+- Transaction: fromAcc, toAcc, amount, type (CREDIT or DEBIT), timestamp
+- Bank: HashMap<String, Account> accounts, List<Transaction> allTransactions
 
 Methods:
 
 - createAccount(Account a)
 - deposit(String accNo, double amount)
-- withdraw(String accNo, double amount) -- check balance first
-- transfer(String fromAcc, String toAcc, double amount)
-- getMiniStatement(String accNo) -- last 5 transactions for this account
-- getRichestCustomers(int n) -- top n by balance using sorting
+- withdraw(String accNo, double amount) -- check balance before
+- transfer(String from, String to, double amount)
+- getMiniStatement(String accNo) -- last 5 transactions involving this account
+- getTopCustomers(int n) -- top n by balance, use sorting
 
 ---
 
-### Q60
+### Q75
 
-Create a Hospital management system combining everything:
+Hospital management system.
 
 Classes:
 
 - Patient: patientId, name, age, List<String> diagnoses, List<String> medicines
-- Doctor: doctorId, name, specialization, PriorityQueue<Patient> waitingQueue (by age, older patients first)
-- Ward: wardNo, wardType, List<Patient> currentPatients, int capacity
-- Hospital: HashMap<String, Doctor> doctors, HashMap<String, Ward> wards, HashMap<String, Patient> patients
+- Doctor: doctorId, name, specialization, PriorityQueue<Patient> waitQueue (older patients first by age)
+- Ward: wardNo, type, int capacity, List<Patient> patients
+- Hospital: HashMap<String, Doctor> doctors, HashMap<String, Ward> wards, HashMap<String, Patient> allPatients
 
 Methods in Hospital:
 
-- admitPatient(Patient p, String wardNo) -- check capacity first
+- admitPatient(Patient p, String wardNo) -- check capacity
 - dischargePatient(String patientId, String wardNo)
-- assignDoctor(String patientId, String doctorId) -- add to doctor's queue
-- getDoctorWorkload() -- print each doctor with number of patients waiting
-- getWardStatus() -- print each ward with occupied/total capacity
-- getPatientHistory(String patientId) -- print all diagnoses and medicines
+- assignDoctor(String patientId, String doctorId) -- add to doctor's priority queue
+- getDoctorWorkload() -- each doctor with number of patients waiting
+- getWardStatus() -- each ward with current/total capacity
+- getPatientRecord(String patientId) -- all diagnoses and medicines
 
 ---
 
-## CONCEPT QUESTIONS - WRITE ANSWERS IN COMMENTS
+## CONCEPT / THEORY QUESTIONS
 
-These test your understanding, not just your coding ability.
+Write answers as comments in code or plain text.
 
 ---
 
 ### C1
 
-Explain the difference between ArrayList and LinkedList. In what situation would you choose LinkedList over ArrayList?
+What is the difference between Iterable, Iterator, and ListIterator? Write one sentence for each.
 
 ---
 
 ### C2
 
-What happens when you add a duplicate to a HashSet? Write a small code snippet to prove your answer.
+What is a fail-fast iterator? What is a fail-safe iterator? Which collection gives you fail-fast and which gives you fail-safe? Write a small code to demonstrate ConcurrentModificationException.
 
 ---
 
 ### C3
 
-What is the difference between HashMap and Hashtable? Why is Hashtable considered outdated?
+Why does removing from a collection inside a for-each loop throw ConcurrentModificationException? How do you fix it? Show two ways to remove elements safely while iterating.
 
 ---
 
 ### C4
 
-Why does TreeSet throw NullPointerException when you try to add null? What would happen in HashSet if you add null twice?
+What is the difference between ArrayList and Vector? Why is Vector considered outdated?
 
 ---
 
 ### C5
 
-What is the difference between poll() and remove() in a Queue? Which one should you prefer and why?
+Why is using Stack class not recommended in modern Java? What should you use instead and why?
 
 ---
 
 ### C6
 
-Why is Map not a part of the Collection interface? Think about how Map works differently from List, Set, and Queue.
+LinkedList implements both List and Deque. What does this mean practically? Write code showing LinkedList being used as a List, as a Queue, and as a Stack.
 
 ---
 
 ### C7
 
-What is the difference between Comparable and Comparator? When would you use one over the other?
+What is the difference between HashSet, LinkedHashSet, and TreeSet in terms of ordering, speed, and null handling?
 
 ---
 
 ### C8
 
-You have a List and you want to remove elements inside a for-each loop. What happens? How do you fix it?
+For HashSet to correctly detect duplicates in custom objects, which two methods must you override? What happens if you do not override them? Show with code.
 
 ---
 
 ### C9
 
-What does Collections (with s) provide that Collection (without s) does not? Name at least 5 methods from Collections class.
+What is the difference between HashMap, LinkedHashMap, and TreeMap in terms of ordering and performance?
 
 ---
 
 ### C10
 
-If you use a custom class as a key in HashMap, what two methods must you override and why? What happens if you don't override them?
+HashMap does not allow null keys. True or false? What about null values? What about Hashtable? What about TreeMap?
 
 ---
 
 ### C11
 
-What is the difference between HashMap, LinkedHashMap, and TreeMap? Give a real world example of when you would use each.
+What is the difference between HashMap and Hashtable? Name 3 differences.
 
 ---
 
 ### C12
 
-What is Iterator and when should you use it instead of for-each loop? What exception does for-each throw if you modify the collection during iteration?
+When would you use WeakHashMap? What problem does it solve?
 
 ---
 
 ### C13
 
-Explain the difference between peek(), poll(), and element() methods in Queue.
+When would you use IdentityHashMap? How is it different from HashMap in key comparison?
 
 ---
 
 ### C14
 
-What is the difference between List.of() and new ArrayList<>()? What happens if you try to add to a List.of() list?
+When would you use EnumMap? Why is it faster than HashMap when keys are enums?
 
 ---
 
 ### C15
 
-Compare HashSet, LinkedHashSet, and TreeSet on three things: order, performance, and null handling.
+What is the difference between Comparable and Comparator? Give a real use case for each.
+
+---
+
+### C16
+
+What does Collections.binarySearch() return if the element is not found? What does it mean?
+
+---
+
+### C17
+
+What is the difference between poll() and remove() in Queue? Which should you prefer and why?
+
+---
+
+### C18
+
+What is the difference between peek() and element() in Queue?
+
+---
+
+### C19
+
+What is ArrayDeque? Why is it recommended over Stack class and also over LinkedList when used as a queue?
+
+---
+
+### C20
+
+What is PriorityQueue? Does it follow FIFO? How is the order determined? How do you change from min-heap to max-heap?
+
+---
+
+### C21
+
+What is the difference between Map.put() and Map.putIfAbsent()? Give a use case where putIfAbsent is more useful.
+
+---
+
+### C22
+
+What does Map.compute() do? What does Map.merge() do? How are they different?
+
+---
+
+### C23
+
+What is the difference between Collections.synchronizedList() and CopyOnWriteArrayList? When would you choose one over the other?
+
+---
+
+### C24
+
+What is the difference between Arrays.asList() and new ArrayList<>(Arrays.asList())? What operation fails on Arrays.asList() result?
+
+---
+
+### C25
+
+What is a raw type in generics? Why is it dangerous? Show an example that compiles but throws a ClassCastException at runtime when raw types are used.
