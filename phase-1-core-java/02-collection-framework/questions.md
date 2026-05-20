@@ -13,12 +13,14 @@ Create an ArrayList of student names.
 - Print the name at index 2
 - Remove "Raj" from the list
 - Insert a new name at index 1
-- Print the full list using for-each loop
 - Print the size
 - Check if "Priya" is in the list
 - Sort the list and print
 - Reverse the list and print
 - Print the alphabetically last name using Collections.max()
+- Loop using for-each and print all
+- Loop using index based for loop and print all
+- Get an Iterator and print all elements using it
 
 ---
 
@@ -34,8 +36,9 @@ Create an ArrayList with these marks: [85, 62, 90, 71, 55, 88, 45, 78]
 - Print max and min
 - Print how many times 85 appears using Collections.frequency()
 - Copy all elements to a new ArrayList using addAll()
-- Clear the original list
-- Check if it is empty
+- Loop through the new list using for-each and print all
+- Loop through using Iterator and print all
+- Clear the original list and check if it is empty
 
 ---
 
@@ -49,9 +52,10 @@ Create a LinkedList of names.
 - Print the first and last element
 - Remove the first element and print who got removed
 - Remove the last element and print who got removed
-- Print the remaining list
 - Add a new name at index 1
-- Print the full list using index based loop
+- Loop using for-each and print all
+- Loop using index based for loop and print all
+- Get an Iterator and print all using it
 
 ---
 
@@ -65,10 +69,11 @@ Create a Vector of product names.
 - Add one more product using addElement()
 - Remove one product using removeElement()
 - Print capacity() and size()
-- Loop through using Enumeration
 - Check if a product exists using contains()
 - Sort the vector using Collections.sort()
-- Print the final vector
+- Loop using for-each and print all
+- Loop using Enumeration and print all
+- Loop using Iterator and print all
 
 ---
 
@@ -79,10 +84,11 @@ Create a Stack of numbers.
 - Push 5 numbers: 10, 20, 30, 40, 50
 - Print top element using peek() without removing
 - Pop twice and print what got removed each time
-- Print the remaining stack
 - Check if stack is empty using empty()
 - Find position of 10 using search()
-- Pop all remaining elements one by one in a loop
+- Loop using for-each and print remaining elements
+- Loop using Iterator and print remaining elements
+- Pop all remaining elements one by one in a while loop
 - Check empty() again at the end
 
 ---
@@ -96,8 +102,9 @@ Create an ArrayDeque and use it as a Queue (FIFO - first in first out).
 - Remove 2 people using pollFirst() and print who got served
 - Add 2 more people using offerLast()
 - Print size
-- Print the full queue
-- Keep serving everyone in a loop until queue is empty
+- Loop using for-each and print current queue
+- Loop using Iterator and print current queue
+- Keep polling everyone in a while loop until queue is empty
 - Check isEmpty() at the end
 
 ---
@@ -111,8 +118,9 @@ Create an ArrayDeque and use it as a Stack (LIFO - last in first out).
 - Pop 2 items and print what got removed
 - Push 2 new items
 - Print size
-- Print the full stack
-- Pop everything in a loop
+- Loop using for-each and print current stack
+- Loop using Iterator and print current stack
+- Pop everything in a while loop
 - Check isEmpty() at the end
 
 ---
@@ -125,6 +133,8 @@ Create a HashSet of city names.
 - Print size - duplicates should not be counted
 - Check if a city exists using contains()
 - Remove one city
+- Loop using for-each and print all
+- Loop using Iterator and print all
 - Create a second HashSet with some cities
 - Merge both sets using addAll() and print (union)
 - Find common cities using retainAll() and print (intersection)
@@ -142,11 +152,11 @@ Create a LinkedHashSet of website names.
 - Print the set - insertion order should be maintained
 - Check if a website exists using contains()
 - Remove one website
-- Print size
+- Loop using for-each and print all
+- Loop using Iterator and print all
 - Create an ArrayList that has duplicate names in it
 - Convert that ArrayList to a LinkedHashSet to remove duplicates
-- Convert it back to an ArrayList
-- Print the final list
+- Convert it back to an ArrayList and print
 
 ---
 
@@ -161,6 +171,8 @@ Create a TreeSet with these scores: [85, 62, 90, 71, 55, 88, 45, 78]
 - Print headSet(71) - all values less than 71
 - Print tailSet(71) - 71 and all values greater than it
 - Print subSet(62, 88) - values from 62 up to but not including 88
+- Loop using for-each and print all
+- Loop using Iterator and print all
 - Remove and print the smallest using pollFirst()
 - Remove and print the largest using pollLast()
 - Print the final set
@@ -181,10 +193,10 @@ Create a HashMap of student names and their marks.
 - Try to update an existing student using putIfAbsent() - it should not change
 - Add a new student using putIfAbsent() - it should work
 - Remove one student
-- Loop and print everything using entrySet()
-- Loop using keySet()
-- Loop using values()
-- Use forEach with lambda to print all
+- Loop using entrySet() and print key and value
+- Loop using keySet() and print only keys
+- Loop using values() and print only values
+- Loop using forEach with lambda and print all
 - Print size and check isEmpty()
 
 ---
@@ -196,8 +208,9 @@ You have this array: ["java", "python", "java", "c++", "python", "java", "javasc
 - Count frequency of each language using HashMap and getOrDefault()
 - Do the same using merge() method
 - Print both results - they should match
+- Loop using entrySet() and print each language with its count
 - Find the most frequent language by looping through the map
-- Put the data into a TreeMap to print languages in alphabetical order
+- Put the data into a TreeMap and loop to print languages in alphabetical order
 
 ---
 
@@ -210,7 +223,8 @@ Arman=95, Priya=82, Raj=67, Sneha=91, Rohan=55, Anita=78, Vikram=88, Deepa=61
 - Grading: A = 90 and above, B = 75 to 89, C = 60 to 74, F = below 60
 - Use putIfAbsent() to create a new list for a grade if it does not exist yet
 - Add each student to their grade's list
-- Print the final map
+- Loop using entrySet() and print each grade with its students
+- Loop using keySet() and for each grade print the student list
 - Print how many students got grade A
 
 ---
@@ -220,13 +234,14 @@ Arman=95, Priya=82, Raj=67, Sneha=91, Rohan=55, Anita=78, Vikram=88, Deepa=61
 Create a LinkedHashMap of products and prices.
 
 - Add 5 products in a specific order
-- Print it - order should match what you added
 - Update price of one product
 - Remove one product
 - Check if a product exists using containsKey()
-- Loop using entrySet() and print all
-- Now create a regular HashMap with the same data and print it
-- Notice the difference in output order between the two
+- Loop using entrySet() and print all - order should match insertion
+- Loop using keySet() and print all keys
+- Loop using forEach lambda and print all
+- Now create a regular HashMap with the same data
+- Loop through HashMap and print - notice order may differ
 
 ---
 
@@ -235,15 +250,16 @@ Create a LinkedHashMap of products and prices.
 Create a TreeMap of employee names and salaries.
 
 - Add 5 employees
-- Print the map - keys should be alphabetically sorted
 - Print firstKey() and lastKey()
-- Use lowerKey() to find the name that comes just before "Raj" alphabetically
-- Use higherKey() to find the name that comes just after "Raj"
+- Use lowerKey() to find the name just before "Raj" alphabetically
+- Use higherKey() to find the name just after "Raj"
 - Print headMap("Raj") - all entries before Raj
 - Print tailMap("Raj") - Raj and all entries after
 - Update one employee's salary using put()
 - Remove one employee
-- Print final map
+- Loop using entrySet() and print all - should be alphabetically sorted
+- Loop using keySet() and print all keys
+- Loop using forEach lambda and print all
 
 ---
 
@@ -253,11 +269,12 @@ Create a PriorityQueue of integers.
 
 - Add these numbers: 5, 1, 3, 2, 4
 - Print peek() - should show smallest
-- Poll all elements one by one in a loop and print each
-- Notice they come out in ascending order
+- Loop using for-each and print all - note: this does NOT print in sorted order
+- Loop using Iterator and print all
+- Poll all elements one by one in a while loop and print each - this WILL be in sorted order
 - Now create a new PriorityQueue with comparator (a, b) -> b - a
 - Add same numbers again
-- Poll all and print - should come in descending order now
+- Poll all in a while loop and print - should come in descending order now
 
 ---
 
@@ -265,12 +282,14 @@ Create a PriorityQueue of integers.
 
 Create an ArrayList: ["hi", "arman", "ok", "priya", "yo", "raj"]
 
-- Use Iterator to loop and print all elements
-- Now use Iterator again to remove all strings whose length is less than 3
+- Get an Iterator and print all elements using hasNext() and next()
+- Get a new Iterator and use it to remove all strings whose length is less than 3 using it.remove()
 - Print the final list
 - Now try the same removal using a regular for-each loop
 - It will throw ConcurrentModificationException
 - Write a comment explaining why Iterator is needed for safe removal
+- Create a LinkedList with same data and use ListIterator to print forward
+- Then use the same ListIterator to go backward and print
 
 ---
 
@@ -279,14 +298,12 @@ Create an ArrayList: ["hi", "arman", "ok", "priya", "yo", "raj"]
 Create a class Student with name and marks fields.
 Create an ArrayList of Student objects with 5 students.
 
-- Sort by marks ascending using a lambda Comparator
-- Print the sorted list
-- Sort by marks descending
-- Print again
-- Sort alphabetically by name
-- Print again
+- Sort by marks ascending using a lambda Comparator and print using for-each
+- Sort by marks descending and print using for-each
+- Sort alphabetically by name and print using for-each
 - Sort by marks descending, and if marks are equal then sort by name alphabetically
-- Print final result
+- Print the final sorted list using for-each
+- Loop using Iterator also once to print
 
 ---
 
@@ -295,7 +312,8 @@ Create an ArrayList of Student objects with 5 students.
 Create a HashMap where key is a student name and value is an ArrayList of their marks.
 
 - Add 3 students, each with 3 marks
-- Print all data by looping through the map
+- Loop using entrySet() - for each student, loop their marks list and print all
+- Loop using keySet() - get each student's list and print
 - Write a method that takes a student name and returns their average marks
 - Call that method for each student and print their averages
 - Find and print the name of the student with the highest average
@@ -310,7 +328,8 @@ You are building a simple classroom system. Use whatever collections make sense.
 - Store 5 unique subject names where order does not matter
 - Store student name and their grade as key-value pairs
 - Store student name and list of their subject marks as key-value pairs
-- Print all students sorted alphabetically
-- Print all subjects
-- Print each student with their grade
-- Print each student with their average marks
+- Print all students using for-each
+- Print all students using Iterator
+- Print all subjects using for-each
+- Print each student with their grade using entrySet() loop
+- Print each student with their average marks using entrySet() loop
