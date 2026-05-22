@@ -1,30 +1,17 @@
 
-
-class Outer {
-    int x = 10;
-
-
-    class Inner {
-        void show() {
-            System.out.println("x from outer: " + x);
-        }
-    }
-    
-    static class StaticNested {
-             void show() {
-            System.out.println("Static nested class: ");
-        }
-    }
-} 
+interface Greeting {
+    void greet(String name);
+}
 
 public class Ans6 {
     public static void main(String[] args) {
-        Outer outer = new Outer();
+        Greeting g = new Greeting() {
+            @Override
+            public void greet(String name) {
+                System.out.println("Hello " + name);
+            }
+        };
 
-        System.out.println(outer.x);
-
-        Outer.Inner inner = outer.new Inner();
-
-        inner.show();
+        g.greet("Armaan");
     }
 }
