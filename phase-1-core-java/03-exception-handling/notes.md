@@ -312,7 +312,7 @@ try {
 
 ## PART 5 - THROWS KEYWORD
 
-throws is used in the method signature to declare that this method might throw a checked exception. It passes the responsibility to the caller.
+throws is used in the method signature to declare that this method might throw checked exception. It passes the responsibility to the caller.
 
 ```java
 import java.io.IOException;
