@@ -84,6 +84,7 @@ Do questions in this order - each topic builds on the previous one.
 ## LINKED LIST
 
 **Easy**
+
 1. Reverse a linked list
 2. Find middle of linked list
 3. Detect cycle in linked list - Floyd's algorithm
@@ -161,6 +162,7 @@ Do questions in this order - each topic builds on the previous one.
 ## TREES (Important - medium questions commonly asked)
 
 **Basic**
+
 1. Inorder, Preorder, Postorder traversal - recursive and iterative
 2. Level order traversal (BFS)
 3. Height of binary tree
@@ -186,6 +188,7 @@ Do questions in this order - each topic builds on the previous one.
 20. Flatten binary tree to linked list
 
 **BST specific**
+
 21. Search in BST
 22. Insert in BST
 23. Delete node from BST
@@ -210,6 +213,7 @@ Do questions in this order - each topic builds on the previous one.
 8. Bipartite check
 
 **Medium**
+
 9. Shortest path in unweighted graph - BFS
 10. Dijkstra's algorithm - shortest path weighted graph
 11. Find if path exists between two nodes
