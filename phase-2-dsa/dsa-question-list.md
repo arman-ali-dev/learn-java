@@ -1,5 +1,4 @@
-# DSA Question List - Mid Level Product Companies
-### Target: Razorpay, Zepto, Meesho, Swiggy, Zomato, Cred, PhonePe, Groww
+# DSA Question List
 
 These companies expect Easy to Medium level questions.
 Do questions in this order - each topic builds on the previous one.
@@ -327,7 +326,7 @@ Do 1D DP first. Then 2D. Focus on patterns not memorizing.
 
 ## REALISTIC TARGETS
 
-For mid product companies, you need:
+you need:
 - Arrays and Strings: 100% of Easy, 80% of Medium
 - HashMap: all problems
 - Linked List: all problems
