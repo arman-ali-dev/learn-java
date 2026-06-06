@@ -20,6 +20,7 @@ Do questions in this order - each topic builds on the previous one.
 10. Find the number that appears once (all others appear twice) - XOR trick
 
 **Medium**
+
 11. Two Sum - find two numbers that add to target (HashMap approach)
 12. Three Sum - find all triplets that add to zero
 13. Maximum subarray sum - Kadane's algorithm
