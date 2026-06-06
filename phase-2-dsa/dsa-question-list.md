@@ -52,6 +52,7 @@ Do questions in this order - each topic builds on the previous one.
 8. Convert string to integer (implement atoi)
 
 **Medium**
+
 9. Longest substring without repeating characters - sliding window
 10. Longest palindromic substring
 11. Group anagrams together
@@ -92,6 +93,7 @@ Do questions in this order - each topic builds on the previous one.
 7. Remove duplicates from sorted linked list
 
 **Medium**
+
 8. Merge two sorted linked lists
 9. Add two numbers represented as linked lists
 10. Flatten a multilevel linked list
@@ -105,6 +107,7 @@ Do questions in this order - each topic builds on the previous one.
 ## STACK AND QUEUE
 
 **Stack**
+
 1. Implement stack using array
 2. Valid parentheses
 3. Next greater element
@@ -115,6 +118,7 @@ Do questions in this order - each topic builds on the previous one.
 8. Evaluate reverse polish notation
 
 **Queue**
+
 9. Implement queue using two stacks
 10. Implement stack using two queues
 11. First non-repeating character in stream
@@ -167,6 +171,7 @@ Do questions in this order - each topic builds on the previous one.
 8. Count nodes in complete binary tree
 
 **Medium**
+
 9. Lowest common ancestor of two nodes
 10. Path sum - does path from root to leaf equal target
 11. All paths from root to leaf with given sum
@@ -218,6 +223,7 @@ Do questions in this order - each topic builds on the previous one.
 ## DYNAMIC PROGRAMMING (Most commonly asked DP patterns)
 
 **1D DP**
+
 1. Climbing stairs
 2. House robber
 3. House robber 2 - circular
