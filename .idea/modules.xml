@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/phase-1-core-java/01-oops/src/01-oops.iml" filepath="$PROJECT_DIR$/phase-1-core-java/01-oops/src/01-oops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/phase-1-core-java/01-oops/01-oops2.iml" filepath="$PROJECT_DIR$/phase-1-core-java/01-oops/01-oops2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/phase-1-core-java/02-collection-framework/02-collection-framework.iml" filepath="$PROJECT_DIR$/phase-1-core-java/02-collection-framework/02-collection-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java-mastry.iml" filepath="$PROJECT_DIR$/.idea/java-mastry.iml" />
+    </modules>
+  </component>
+</project>
