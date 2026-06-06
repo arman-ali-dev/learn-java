@@ -239,6 +239,7 @@ Do questions in this order - each topic builds on the previous one.
 9. Decode ways
 
 **2D DP**
+
 10. Unique paths in grid
 11. Minimum path sum in grid
 12. Longest common subsequence
@@ -267,6 +268,7 @@ Do questions in this order - each topic builds on the previous one.
 ## TWO POINTERS AND SLIDING WINDOW (Very important)
 
 **Two Pointers**
+
 1. Two sum in sorted array
 2. Three sum
 3. Container with most water
@@ -277,6 +279,7 @@ Do questions in this order - each topic builds on the previous one.
 8. Sort colors - Dutch national flag
 
 **Sliding Window**
+
 9. Maximum sum subarray of size k
 10. Longest substring without repeating characters
 11. Longest substring with at most k distinct characters
