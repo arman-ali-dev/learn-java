@@ -2,6 +2,22 @@
 
 ## Phase 1 — Core Java (4 to 6 weeks)
 
+### Java Fundamentals & Core Syntax
+
+- Java program structure: main method, class, packages, imports
+- Primitive data types: int, float, double, char, boolean, long, byte, short
+- Type casting: implicit (widening) and explicit (narrowing)
+- Operators: arithmetic, relational, logical, bitwise, ternary, assignment
+- Control flow: if, else if, else, switch
+- Loops: for, while, do-while, enhanced for-each
+- Arrays: single-dimensional, multi-dimensional, array traversal
+- Methods: defining, calling, return types, method overloading
+- Scope and lifetime of variables: local, instance, static
+- String basics: String, StringBuilder, StringBuffer, common methods
+- Wrapper classes: Integer, Double, Character, Boolean, autoboxing & unboxing
+- Generics basics: generic methods and generic classes (<T>)
+- Scanner class for user input
+
 ### OOP Concepts
 
 - Classes, Objects, Constructors
