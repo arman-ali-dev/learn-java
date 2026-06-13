@@ -2,7 +2,7 @@
 
 ## Phase 1 — Core Java (4 to 6 weeks)
 
-### Java Fundamentals & Core Syntax
+### Java Fundamentals
 
 - Java program structure: main method, class, packages, imports
 - Primitive data types: int, float, double, char, boolean, long, byte, short
