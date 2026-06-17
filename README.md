@@ -133,37 +133,73 @@ Yahi sabse bada gap hai. Companies pehle DSA check karti hain.
 
 ## Phase 3 — Spring Boot and Backend (6 to 8 weeks)
 
-### Spring Boot Core
+### Web Fundamentals (Before Spring)
 
-- Dependency Injection and IoC container
-- Bean lifecycle and scopes
-- Auto-configuration
-- application.properties and profiles
-- Actuator
+- Client-Server architecture (how a browser/app talks to a server)
+- HTTP protocol basics: request-response cycle
+- HTTP methods: GET, POST, PUT, PATCH, DELETE and when to use which
+- HTTP status codes: 2xx, 3xx, 4xx, 5xx (and the commonly used ones: 200, 201, 400, 401, 403, 404, 500)
+- Request and Response structure: headers, body, query params, path params
+- Statelessness of HTTP
+- JSON as a data exchange format
+- What is an API, and what makes an API "RESTful"
+- Basics of Postman (testing APIs before building a frontend)
+
+### Spring Core (Framework Fundamentals)
+
+- IoC container and Dependency Injection (constructor vs setter vs field injection)
+- Bean lifecycle (instantiation, initialization, destruction)
+- Bean scopes: Singleton, Prototype, Request, Session
+- ApplicationContext vs BeanFactory
+- @Component, @Service, @Repository, @Configuration, @Bean
+- Aspect-Oriented Programming (AOP): cross-cutting concerns, @Aspect, @Before, @After, @Around
+
+### Spring Boot Essentials
+
+- Auto-configuration (how Spring Boot decides beans automatically)
+- application.properties / application.yml and profiles
+- Starter dependencies
+- Spring Boot Actuator (health checks, metrics)
+- Externalized configuration with @Value and @ConfigurationProperties
+
+### Spring MVC Architecture
+
+- DispatcherServlet request flow (front controller pattern)
+- @Controller vs @RestController
+- @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping
+- @PathVariable, @RequestParam, @RequestBody, @ResponseBody
 
 ### REST API Development
 
-- @RestController, @RequestMapping
-- Request validation with @Valid
-- DTO pattern
-- Exception handling with @ControllerAdvice
-- Pagination and sorting
+- DTO pattern (separating entity from API contract)
+- Request validation with @Valid and Bean Validation annotations
+- Global exception handling with @ControllerAdvice and @ExceptionHandler
+- Pagination and sorting (Pageable, Sort)
+- ResponseEntity and proper HTTP status codes
+
+### Spring Data JPA and Hibernate
+
+- Entity mapping (@Entity, @Id, @Column, @Table)
+- Relationships: One-to-One, One-to-Many, Many-to-ManyRepository pattern: JpaRepository, CrudRepository
+- JPQL and native queries
+- Lazy vs Eager loading (N+1 problem)
+- Transaction management (@Transactional, propagation, isolation levels)
 
 ### Spring Security
 
 - Authentication vs Authorization
+- Security filter chain
 - JWT implementation from scratch
+- Role-based access control (RBAC)
 - OAuth2 basics
-- Role-based access control
-- Filter chain
+- Password encoding (BCrypt)
 
-### JPA and Hibernate
+### Testing
 
-- Entity mapping
-- One-to-One, One-to-Many, Many-to-Many relationships
-- JPQL and Native queries
-- Lazy vs Eager loading
-- Transactions
+- Unit testing with JUnit 5
+- Mocking with Mockito
+- @WebMvcTest, @DataJpaTest, @SpringBootTest
+- Integration testing with TestContainers (intro level)
 
 ### API Gateway
 
@@ -180,11 +216,6 @@ Yahi sabse bada gap hai. Companies pehle DSA check karti hain.
 - Config server
 - Circuit breaker with Resilience4j
 
-### Resources
-
-- YouTube: Java Brains (Spring Boot series)
-- YouTube: Amigoscode
-- Official Spring documentation: spring.io
 
 ---
 
