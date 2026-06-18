@@ -2,21 +2,18 @@
 
 ## Phase 1 — Core Java (4 to 6 weeks)
 
-### Java Fundamentals
+### Pre-Spring Essentials (combines Web Fundamentals + Maven)
 
-- Java program structure: main method, class, packages, imports
-- Primitive data types: int, float, double, char, boolean, long, byte, short
-- Type casting: implicit (widening) and explicit (narrowing)
-- Operators: arithmetic, relational, logical, bitwise, ternary, assignment
-- Control flow: if, else if, else, switch
-- Loops: for, while, do-while, enhanced for-each
-- Arrays: single-dimensional, multi-dimensional, array traversal
-- Methods: defining, calling, return types, method overloading
-- Scope and lifetime of variables: local, instance, static
-- String basics: String, StringBuilder, StringBuffer, common methods
-- Wrapper classes: Integer, Double, Character, Boolean, autoboxing & unboxing
-- Generics basics: generic methods and generic classes (<T>)
-- Scanner class for user input
+- Client-Server architecture (how a browser/app talks to a server)
+- HTTP protocol basics: request-response cycle
+- HTTP methods: GET, POST, PUT, PATCH, DELETE and when to use which
+- HTTP status codes: 2xx, 3xx, 4xx, 5xx (and the commonly used ones: 200, 201, 400, 401, 403, 404, 500)
+- Request and Response structure: headers, body, query params, path params
+- Statelessness of HTTP
+- JSON as a data exchange format
+- What is an API, and what makes an API "RESTful"
+- Basics of Postman (testing APIs before building a frontend)
+- Maven: project structure, pom.xml, dependencies, build lifecycle, plugins
 
 ### OOP Concepts
 
@@ -215,7 +212,6 @@ Yahi sabse bada gap hai. Companies pehle DSA check karti hain.
 - Feign client for inter-service communication
 - Config server
 - Circuit breaker with Resilience4j
-
 
 ---
 

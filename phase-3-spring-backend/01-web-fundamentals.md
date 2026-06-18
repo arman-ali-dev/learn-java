@@ -1,4 +1,4 @@
-# Web Fundamentals (Before Spring) - Complete Notes
+# Pre-Spring Essentials - Complete Notes
 
 ---
 
@@ -694,7 +694,224 @@ Once you start building Spring Boot controllers, Postman becomes your main testi
 
 ---
 
-## PART 10 - QUICK REFERENCE
+## PART 10 - MAVEN: PROJECT STRUCTURE AND BUILD TOOL
+
+### Why Maven exists
+
+Every Java project needs external libraries (called dependencies) - for example, Spring Boot itself, a database driver, a JSON library. Without a build tool, you would have to manually download every `.jar` file, manually keep track of which version works with which, manually add them to your classpath, and manually figure out which OTHER jars those jars depend on. This becomes unmanageable very fast.
+
+Maven solves this. You just declare WHAT you need in a single file, and Maven downloads it, manages it, and makes it available to your project automatically - including any dependencies those dependencies need (called transitive dependencies).
+
+```
+Without Maven:
+- Manually download spring-core.jar, spring-web.jar, jackson.jar, hibernate.jar...
+- Figure out version compatibility yourself
+- Manually add each to your project's classpath
+- Repeat every time you switch machines or share the project
+
+With Maven:
+- Write a few lines in pom.xml
+- Run one command
+- Maven downloads everything, including dependencies of dependencies
+```
+
+Maven also standardizes HOW a Java project is built - compiling code, running tests, packaging into a `.jar` or `.war`, and so on - so every Maven project follows the same predictable steps regardless of what the project actually does.
+
+### Standard project structure
+
+Maven enforces a standard folder layout. Every Maven project looks like this, which means once you understand one Maven project, you instantly know your way around any other.
+
+```
+my-spring-app/
+├── pom.xml                          <- the heart of the project (see below)
+├── src/
+│   ├── main/
+│   │   ├── java/                    <- your actual Java source code goes here
+│   │   │   └── com/example/app/
+│   │   │       ├── Application.java
+│   │   │       └── controller/
+│   │   │           └── UserController.java
+│   │   └── resources/               <- non-Java files: properties, configs, templates
+│   │       └── application.properties
+│   └── test/
+│       └── java/                    <- your test classes go here, mirrors main/java structure
+│           └── com/example/app/
+│               └── UserControllerTest.java
+└── target/                          <- generated automatically when you build
+    ├── classes/                     <- compiled .class files end up here
+    └── my-spring-app-1.0.0.jar       <- the final packaged application
+```
+
+You never need to invent this structure yourself - Maven (and Spring Initializr, which generates Spring Boot projects) creates it for you, and every IDE understands it automatically.
+
+### pom.xml - the project's blueprint
+
+`pom.xml` stands for Project Object Model. It is an XML file that describes your project: what it's called, what version it is, and most importantly, what dependencies (libraries) it needs.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- identifies YOUR project uniquely -->
+    <groupId>com.example</groupId>      <!-- usually your domain reversed -->
+    <artifactId>my-spring-app</artifactId> <!-- the project/module name -->
+    <version>1.0.0</version>            <!-- your project's version -->
+    <packaging>jar</packaging>          <!-- jar (standalone app) or war (deployed to a server) -->
+
+    <!-- which Java version to compile against -->
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <!-- the libraries your project needs -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.2.0</version>
+        </dependency>
+    </dependencies>
+
+</project>
+```
+
+### groupId, artifactId, version - identifying any dependency
+
+Every library in the Maven world (your own project included) is identified by exactly these three coordinates, often called GAV.
+
+```
+groupId     = who made it / which organization (com.google, org.springframework)
+artifactId  = the specific library/project name (spring-web, gson)
+version     = which exact version (3.2.0, 2.10.1)
+
+This is why dependency declarations always have this 3-part shape:
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-web</artifactId>
+<version>3.2.0</version>
+```
+
+When you search "spring-boot-starter-web maven" online, you're looking for exactly these 3 coordinates to copy into your `pom.xml`.
+
+### Transitive dependencies
+
+When you add ONE dependency, Maven automatically also pulls in everything THAT dependency needs internally. You don't have to chase down each one manually.
+
+```
+You add:
+spring-boot-starter-web
+
+Maven automatically also brings in (without you writing anything):
+- spring-web
+- spring-webmvc
+- tomcat-embedded (so you don't need a separate server!)
+- jackson-databind (for JSON conversion)
+- ... and more
+
+This is exactly why Spring Boot "starters" exist - one starter dependency
+pulls in everything needed for that feature, pre-configured to work together.
+```
+
+### Build lifecycle - the standard phases
+
+Maven defines a fixed sequence of phases that every build goes through. Running a later phase automatically runs all the earlier phases first.
+
+```
+validate   -> checks the project structure/pom.xml is correct
+compile    -> compiles your .java source files into .class files
+test       -> runs your unit tests (using JUnit, etc.)
+package    -> bundles compiled code into a .jar or .war file
+verify     -> runs checks to ensure the package is valid
+install    -> copies the package into your LOCAL Maven repository
+             (so other projects on your machine can use it as a dependency)
+deploy     -> copies the package to a REMOTE repository (shared with a team/server)
+```
+
+```
+mvn compile   -> just compiles
+mvn test      -> compiles, THEN runs tests (compile happens first automatically)
+mvn package   -> compiles, tests, THEN packages into jar/war
+mvn install   -> compiles, tests, packages, THEN installs to local repo
+
+This is why "mvn install" takes longer than "mvn compile" -
+it's not skipping steps, it's running ALL the steps before it too.
+```
+
+### Common Maven commands
+
+```bash
+mvn clean              # deletes the target/ folder (fresh start, removes old build artifacts)
+mvn compile             # compiles source code
+mvn test                # runs tests
+mvn package             # creates the .jar/.war file in target/
+mvn install             # installs the package into your local repo (~/.m2)
+mvn clean install        # very commonly used together - fresh build, fully installed
+mvn spring-boot:run       # runs a Spring Boot app directly via Maven (needs the spring-boot-maven-plugin)
+```
+
+### Where dependencies actually get stored - the local repository
+
+Maven does not download dependencies fresh every single time. The first time you build, it downloads everything into a local folder on your machine called the local repository (usually `~/.m2/repository`). Every future project on the same machine reuses these already-downloaded files instead of downloading them again.
+
+```
+~/.m2/repository/
+└── org/
+    └── springframework/
+        └── boot/
+            └── spring-boot-starter-web/
+                └── 3.2.0/
+                    └── spring-boot-starter-web-3.2.0.jar
+```
+
+If a dependency is missing locally, Maven fetches it from a remote repository (Maven Central by default - the public, official hub for Java libraries) and caches it locally for next time.
+
+### Plugins - extending what Maven can do
+
+Plugins add extra capabilities to the build process beyond the default lifecycle. The most important one for Spring Boot is the Spring Boot Maven Plugin, which lets you package your app as an executable jar (one that can run with `java -jar app.jar` without needing a separately installed server).
+
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+    </plugins>
+</build>
+```
+
+```bash
+mvn clean package
+# produces target/my-spring-app-1.0.0.jar
+# this jar has an embedded Tomcat server inside it
+
+java -jar target/my-spring-app-1.0.0.jar
+# runs your entire Spring Boot application, server included, with one command
+```
+
+### Maven vs Gradle (just so you know the alternative exists)
+
+```
+Maven                              |  Gradle
+------------------------------------|------------------------------------
+Uses XML (pom.xml)                  |  Uses Groovy/Kotlin DSL (build.gradle)
+Fixed lifecycle phases               |  More flexible, task-based
+Older, more widespread legacy use    |  Newer, often faster builds
+Most common in tutorials/Spring docs |  Common in Android development
+```
+
+You will see Gradle in some projects, but Maven remains the default and most common choice for Spring Boot, and it's what Spring Initializr generates by default.
+
+---
+
+## PART 11 - QUICK REFERENCE
 
 ```
 CLIENT-SERVER:
@@ -749,4 +966,15 @@ POSTMAN:
   Tool to manually send HTTP requests and inspect responses
   Test backend APIs before building/connecting a frontend
   Workflow: choose method -> enter URL -> add headers/body -> Send -> inspect response
+
+MAVEN:
+  Build tool that manages dependencies and standardizes project structure
+  pom.xml = blueprint: groupId, artifactId, version, dependencies, plugins
+  Standard structure: src/main/java, src/main/resources, src/test/java, target/
+  GAV coordinates identify any dependency: groupId + artifactId + version
+  Transitive dependencies: one dependency pulls in everything IT needs too
+  Lifecycle phases (in order): validate -> compile -> test -> package -> verify -> install -> deploy
+  Local repo: ~/.m2/repository (downloaded once, reused across projects)
+  Common commands: mvn clean, mvn package, mvn install, mvn clean install
+  Spring Boot Maven Plugin -> packages app as executable jar with embedded server
 ```
