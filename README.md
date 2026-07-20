@@ -123,11 +123,6 @@ This is usually the biggest gap. Companies check DSA before anything else.
 - Merge sort, Quick sort
 - Counting sort
 
-### Resources
-
-- Striver's A2Z DSA Sheet (free, best for beginners)
-- LeetCode: Start with Easy, then Medium
-
 ---
 
 ## Phase 3 — Spring Boot and Backend
@@ -284,17 +279,3 @@ This is usually the biggest gap. Companies check DSA before anything else.
 - Redis data structures
 - Spring Boot Redis integration
 - Cache strategies: Write-through, Write-back, Cache-aside
-
-### Resources
-
-- YouTube: TechWorld with Nana (Docker and Kubernetes)
-- Play with Kubernetes: labs.play-with-k8s.com
-
----
-
-## GitHub Portfolio
-
-- All existing projects should have proper README files
-- Add screenshots and live demo links
-- Write clean commit messages
-- At least one new Java project showcasing the advanced Spring topics (security, messaging, microservices)
