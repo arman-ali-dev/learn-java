@@ -1,6 +1,6 @@
 # Java Mastery Roadmap
 
-## Phase 1 — Core Java (4 to 6 weeks)
+## Phase 1 — Core Java
 
 ### Java Fundamentals
 
@@ -70,9 +70,9 @@
 
 ---
 
-## Phase 2 — DSA in Java (6 to 8 weeks)
+## Phase 2 — DSA in Java
 
-Yahi sabse bada gap hai. Companies pehle DSA check karti hain.
+This is usually the biggest gap. Companies check DSA before anything else.
 
 ### Arrays and Strings
 
@@ -127,13 +127,12 @@ Yahi sabse bada gap hai. Companies pehle DSA check karti hain.
 
 - Striver's A2Z DSA Sheet (free, best for beginners)
 - LeetCode: Start with Easy, then Medium
-- Target: 2 to 3 problems daily
 
 ---
 
-## Phase 3 — Spring Boot and Backend (6 to 8 weeks)
+## Phase 3 — Spring Boot and Backend
 
-### Pre-Spring Essentials (combines Web Fundamentals + Maven)
+### Pre-Spring Essentials (Web Fundamentals + Maven)
 
 - Client-Server architecture (how a browser/app talks to a server)
 - HTTP protocol basics: request-response cycle
@@ -153,7 +152,7 @@ Yahi sabse bada gap hai. Companies pehle DSA check karti hain.
 - Bean scopes: Singleton, Prototype, Request, Session
 - ApplicationContext vs BeanFactory
 - @Component, @Service, @Repository, @Configuration, @Bean
-- Aspect-Oriented Programming (AOP): cross-cutting concerns, @Aspect, @Before, @After, @Around
+- Aspect-Oriented Programming (AOP): cross-cutting concerns, @Aspect, @Before, @After, @Around, @Pointcut expressions, weaving (compile-time vs runtime)
 
 ### Spring Boot Essentials
 
@@ -162,6 +161,7 @@ Yahi sabse bada gap hai. Companies pehle DSA check karti hain.
 - Starter dependencies
 - Spring Boot Actuator (health checks, metrics)
 - Externalized configuration with @Value and @ConfigurationProperties
+- Custom auto-configuration and conditional beans (@Conditional, @ConditionalOnProperty)
 
 ### Spring MVC Architecture
 
@@ -177,30 +177,61 @@ Yahi sabse bada gap hai. Companies pehle DSA check karti hain.
 - Global exception handling with @ControllerAdvice and @ExceptionHandler
 - Pagination and sorting (Pageable, Sort)
 - ResponseEntity and proper HTTP status codes
+- API versioning strategies
+- HATEOAS basics
 
 ### Spring Data JPA and Hibernate
 
 - Entity mapping (@Entity, @Id, @Column, @Table)
-- Relationships: One-to-One, One-to-Many, Many-to-ManyRepository pattern: JpaRepository, CrudRepository
+- Relationships: One-to-One, One-to-Many, Many-to-Many
+- Repository pattern: JpaRepository, CrudRepository
 - JPQL and native queries
 - Lazy vs Eager loading (N+1 problem)
 - Transaction management (@Transactional, propagation, isolation levels)
+- Second-level caching (Hibernate + Ehcache/Redis)
+- Query optimization and entity graphs
 
-### Spring Security
+### Spring Security (Advanced)
 
 - Authentication vs Authorization
-- Security filter chain
-- JWT implementation from scratch
-- Role-based access control (RBAC)
-- OAuth2 basics
-- Password encoding (BCrypt)
+- Security filter chain internals
+- JWT implementation from scratch (access + refresh tokens)
+- Role-based and permission-based access control (RBAC, method security with @PreAuthorize/@PostAuthorize)
+- OAuth2 and OpenID Connect (Authorization Code flow, resource server, auth server)
+- Password encoding (BCrypt, Argon2)
+- CORS and CSRF handling
+- Custom authentication providers and filters
+- Securing microservices with a central identity provider (Keycloak basics)
+
+### Reactive Programming (Spring WebFlux)
+
+- Imperative vs reactive programming model
+- Mono, Flux, and the Reactive Streams spec
+- WebClient for non-blocking HTTP calls
+- R2DBC for reactive database access
+- Backpressure handling
+
+### Messaging and Event-Driven Architecture
+
+- Apache Kafka basics: producers, consumers, topics, partitions
+- Spring Kafka integration
+- RabbitMQ basics and Spring AMQP
+- Event-driven vs request-driven design
+- Idempotency and message ordering concerns
+
+### Batch Processing
+
+- Spring Batch: Jobs, Steps, ItemReader/Processor/Writer
+- Chunk-oriented processing
+- Scheduling batch jobs
 
 ### Testing
 
 - Unit testing with JUnit 5
 - Mocking with Mockito
 - @WebMvcTest, @DataJpaTest, @SpringBootTest
-- Integration testing with TestContainers (intro level)
+- Integration testing with TestContainers
+- Contract testing basics (Spring Cloud Contract)
 
 ### API Gateway
 
@@ -216,10 +247,13 @@ Yahi sabse bada gap hai. Companies pehle DSA check karti hain.
 - Feign client for inter-service communication
 - Config server
 - Circuit breaker with Resilience4j
+- Distributed tracing (Sleuth/Micrometer Tracing + Zipkin)
+- Saga pattern and distributed transactions
+- API composition and BFF (Backend for Frontend) pattern
 
 ---
 
-## Phase 4 — DevOps Tools (4 to 5 weeks)
+## Phase 4 — DevOps Tools
 
 ### Docker
 
@@ -258,86 +292,9 @@ Yahi sabse bada gap hai. Companies pehle DSA check karti hain.
 
 ---
 
-## Phase 5 — Interview Preparation (Ongoing throughout)
+## GitHub Portfolio
 
-### Java Interview Topics
-
-- Core Java frequently asked questions
-- Spring Boot interview questions
-- Difference questions: HashMap vs Hashtable, ArrayList vs LinkedList
-- SOLID principles
-- Design patterns: Singleton, Factory, Builder, Observer
-
-### System Design Basics (Fresher level)
-
-- Monolith vs Microservices
-- Load balancer concept
-- Database scaling: vertical vs horizontal
-- CAP theorem basics
-- SQL vs NoSQL when to use which
-- Caching strategies
-
-### LeetCode Practice Plan
-
-- Week 1 to 4: Easy problems only (Arrays, Strings, LinkedList)
-- Week 5 to 8: Easy + Medium (Trees, Stack, Queue)
-- Week 9 onwards: Medium problems (Graphs, DP)
-- Target: 100+ problems before interviews
-
-### GitHub Portfolio
-
-- All 3 existing projects should have proper README files
+- All existing projects should have proper README files
 - Add screenshots and live demo links
 - Write clean commit messages
-- At least one new Java project after completing Phase 3
-
----
-
-## Weekly Schedule (Suggested)
-
-Monday to Friday:
-
-- 1 hour: Current phase topic study
-- 1 hour: DSA problem solving (1 to 2 problems)
-- 30 minutes: Revise previous day topic
-
-Saturday:
-
-- Build or add a feature to a project
-- Push to GitHub
-
-Sunday:
-
-- Revision only
-- Read interview questions of topics covered this week
-
----
-
-## Month-wise Plan
-
-Month 1: Phase 1 (Core Java) + DSA basics (Arrays, Strings, LinkedList)
-Month 2: Phase 1 complete + DSA (Stack, Queue, Trees)
-Month 3: Phase 2 complete (DSA graphs and DP) + Phase 3 start
-Month 4: Phase 3 complete (Spring Boot advanced)
-Month 5: Phase 4 (Docker, Kubernetes, DevOps)
-Month 6: Phase 5 (Interview prep) + Aggressive applying
-Month 7: Interviews, revisions, and offers
-
----
-
-## Where to Apply
-
-Internships (apply from Month 3 onwards):
-
-- Internshala: search Java Developer Intern
-- LinkedIn: Java Intern filter with Remote option
-- Unstop: competitions and hiring both
-
-Fresher Jobs (apply from Month 5 onwards):
-
-- Naukri.com: Java Developer 0 to 1 year
-- Wellfound (AngelList): startups hire on skills
-- Cutshort.io: tech-specific jobs
-- LinkedIn: Java Developer Fresher Noida or Remote
-
----
+- At least one new Java project showcasing the advanced Spring topics (security, messaging, microservices)
