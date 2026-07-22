@@ -30,8 +30,8 @@ Do questions in this order - each topic builds on the previous one.
 17. Find the majority element (appears more than n/2 times)
 18. Sort array of 0s, 1s, and 2s - Dutch National Flag
 19. Merge two sorted arrays without extra space
-20. Find the subarray with given sum (positive numbers)
-21. Longest subarray with sum equal to k (positive and negative)
+20. Find the subarray with given sum (positive numbers) - GeeksForGeeks
+21. Subarray Sum Equals K
 22. Maximum product subarray
 23. Trapping rainwater
 24. Jump Game - can you reach the last index
